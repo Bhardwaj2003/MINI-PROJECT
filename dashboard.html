@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Option Selection</title>
+  <style>
+    #budget-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1; /* Place the form above the image */
+      }
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      body {
+        margin: 0;
+        overflow: hidden; /* Remove default margin and scrollbars */
+      }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color:rgb(1, 14, 28);
+    }
+  </style>
+</head>
+<body>
+    <div id="budget-form">
+  <h2>Select Your Cash-In-Hand:</h2>
+  <button onclick="redirectToPage('1.html')">UPTO ₹5000</button>
+  <button onclick="redirectToPage('2.html')">₹5000-₹15000</button>
+  <button onclick="redirectToPage('3.html')">₹15000-₹25000</button>
+  <br>
+  <br>
+  <button onclick="redirectToPage('cal.html')">CALCULATED PLAN</button>
+  <button onclick="redirectToPage('budget.html')">GENERAL BUDGET</button>
+  <h5>View a detailed budget-plan for your expenses.</h5>
+  </div>
+  <script>
+    function redirectToPage(pageUrl) {
+      window.location.href = pageUrl;
+    }
+  </script>
+  <img src="img2.webp" alt="Fullscreen Image">
+</body>
+</html>

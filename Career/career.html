@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Career Path Recommender</title>
+  <style>
+    #heading{
+      font-size: 50px;
+      position:sticky;
+      top:0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 700;
+    }
+  
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:cursive;
+      background-size: cover;
+      animation: backgroundAnimation 0.5s infinite alternate;
+    }
+    
+    
+    h1 {
+      color: rgb(239, 232, 232);
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+    h2 {
+      color: rgb(239, 232, 232);
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+     
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      background-color: rgb(115, 226, 113);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #1b0a0a;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  
+    p {
+      color: #555;
+      margin-top: 20px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #050708;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  button:hover {
+      background-color: #121412;
+  }
+  @keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(45deg, #8b1ab1, #42668a);
+    }
+    100% {
+        background: linear-gradient(45deg, #b72e82, #6c7681);
+    }
+}
+
+  </style>
+</head>
+<body>
+<h1>Career Path Recommender &#9786</h1>
+<h2>"Honest people don't hide their deeds”</h2>
+  <h2>Need Some Answers!!</h2>
+  <form>
+    <label for="yesNoDropdown">Your Interests/Hobbies?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="Sports">Sports</option>
+      <option value="Photography">Photography</option>
+      <option value="Dance">Dance</option>
+      <option value="Painting">Painting</option>
+      <option value="Writing">Writing</option>
+      <option value="Drwaing">Drawing</option>
+      <option value="Acting">Acting</option>
+      <option value="Cooking">Cooking</option>
+      <option value="Digital Art">Digital Art</option>
+      <option value="Web Design">Web Design</option>
+      <option value="Singing">Singing</option>
+      <option value="Gymnastics">Gymnastics</option>
+      <option value="Hiking">Hiking</option>
+      <option value="Film making">Film making</option>
+      <option value="Embroidery">Embroidery</option>
+      <option value="Model building">Model building</option>
+      <option value="Handicraft">Handicraft</option>
+      <option value="Gardening">Gardening</option>
+    </select>
+    <label for="yesNoDropdown">Do you prefer working with a team?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+      <label for="yesNoDropdown">Person In Nature?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="Introvert">Introvert</option>
+      <option value="Extrovert">Extrovert</option>
+    </select>
+      <label for="yesNoDropdown">Do your Friends like you?</label>
+      <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <label for="yesNoDropdown">Do you have Leadership Qualities?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    </select>
+    <label for="yesNoDropdown">You're good at Management Skills?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Do you enjoy position/power?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Ready to Take Challenges?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Difficulty in accepting changes?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Interested in Nation-service?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Do you like to groom yourself?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Do you like Problem Solving?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  <label for="yesNoDropdown">Are you a Fitness Freak?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Are you interested in sports?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Do you enjoy imparting knowledge?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Do you enjoy dance/singing/acting/painting?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <label for="yesNoDropdown">Do computer/web design interests you?</label>
+    <select id="yesNoDropdown" name="yesNoDropdown" onchange="showQuestion()">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    <div id="questionContainer"></div>
+    <br>
+    <button onclick="showAlert()"><b>Submit</b></button>
+    <script>
+      function showAlert() {
+        alert("Alert: Form is being submitted!");
+      }
+    </script>
+    <br>
+    <br>
+      <button onclick="openWindow()"><b>Click to Proceed</b></button> 
+    <script>
+      function openWindow(){
+        window.open("all.html","","")
+    }
+    </script>
+  </form>
+
+  <script>
+    function showQuestion() {
+      var selectedOption = document.getElementById("yesNoDropdown").value;
+      var questionContainer = document.getElementById("questionContainer");
+
+      // Clear previous question
+      questionContainer.innerHTML = "";
+
+      // Add a question based on the selected option
+      var question = document.createElement("p");
+      switch (selectedOption) {
+        case "yes":
+          question.textContent = "Great!";
+          break;
+        case "no":
+          question.textContent = "That's okay";
+          break;
+        default:
+          question.textContent = "Please select Yes or No.";
+      }
+
+      // Display the question
+      questionContainer.appendChild(question);
+    }
+  </script>
+</body>
+</html>

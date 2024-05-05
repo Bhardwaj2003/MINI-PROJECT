@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Planner</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color:rgb(7, 30, 45);
+    }
+
+    #budget-form {
+      background-color: #826eca;
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    input {
+      width: 100%;
+      padding: 4px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="budget-form">
+  <h2><center>Budget Planner</center></h2>
+  
+  <label for="income">Cash-In-Hand:</label>
+  <input type="number" id="income" placeholder="Enter your income">
+
+  <label for="inputValue">Food Expense:</label>
+  <input type="number" id="inputValue" placeholder="Enter amount in rupees">
+  <button onclick="calculate50Percent()">New FOOD Expense</button>
+  <div id="result"></div>
+  <br>
+
+  <label for="inputValue1">Clothing Expense:</label>
+  <input type="number" id="inputValue1" placeholder="Enter amount in rupees">
+  <button onclick="calculate70Percent()">New CLOTHING Expense</button>
+  <div id="result1"></div>
+  <br>
+
+  <label for="inputValue3">Grocery & Beverages Expense:</label>
+  <input type="number" id="inputValue3" placeholder="Enter amount in rupees">
+  <button onclick="calculate30Percent()">New BEVERAGES Expense</button>
+  <div id="result3"></div>
+  <br>
+
+  <label for="inputValue2">Trip & other Expense:</label>
+  <input type="number" id="inputValue2" placeholder="Enter amount in rupees">
+  <button onclick="calculate40Percent()">New Expense</button>&nbsp;
+  <button onclick="goBack()">Go Back</button>
+
+  <div id="result2"></div>
+  <br>
+  
+  <script>
+  function calculate50Percent() {
+    var inputValue = parseFloat(document.getElementById('inputValue').value);
+    var resultElement = document.getElementById('result');
+  
+    if (isNaN(inputValue)) {
+      resultElement.textContent = 'Please enter a valid number.';
+    } else {
+      var fiftyPercent = inputValue * 0.5;
+      resultElement.textContent = 'New Expense should be upto: ₹' + fiftyPercent.toFixed(2);
+    }
+  }
+
+  function calculate70Percent() {
+    var inputValue1 = parseFloat(document.getElementById('inputValue1').value);
+    var result1Element = document.getElementById('result1');
+  
+    if (isNaN(inputValue1)) {
+      result1Element.textContent = 'Please enter a valid number.';
+    } else {
+      var SeventyPercent = inputValue1 * 0.7;
+      result1Element.textContent = 'New Expense should be upto: ₹' + SeventyPercent.toFixed(2);
+    }
+  }
+
+  function calculate30Percent() {
+    var inputValue3 = parseFloat(document.getElementById('inputValue3').value);
+    var result3Element = document.getElementById('result3');
+  
+    if (isNaN(inputValue3)) {
+      result3Element.textContent = 'Please enter a valid number.';
+    } else {
+      var ThirtyPercent = inputValue3 * 0.3;
+      result3Element.textContent = 'New Expense should be upto: ₹' +  ThirtyPercent.toFixed(2);
+    }
+  }
+
+  function calculate40Percent() {
+    var inputValue2 = parseFloat(document.getElementById('inputValue2').value);
+    var result2Element = document.getElementById('result2');
+  
+    if (isNaN(inputValue2)) {
+      result2Element.textContent = 'Please enter a valid number.';
+    } else {
+      var FortyPercent = inputValue2 * 0.4;
+      result2Element.textContent = 'New Expense should be upto: ₹' + FortyPercent.toFixed(2);
+    }
+  }
+  function goBack() {
+    window.history.back();
+  }
+</script>
+</select>
+</body>
+</html>

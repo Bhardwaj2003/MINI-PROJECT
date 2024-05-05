@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 1</title>
+  <style>
+      .fullscreen-image {
+        width: 100vw;
+        height: 100vh;
+        object-fit:fill;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      body {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text-on-right {
+        position: absolute;
+        top: 50%;
+        left: 85%; /* Adjust the left percentage as needed */
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: #333;
+        font-size: 18px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #35e13b;
+      }
+
+  </style>
+</head>
+<body>
+<img src="FOOD EXPENSES.png" alt="Fullscreen Image">
+  <button onclick="goBack()">Go Back</button>
+  <script>
+    function goBack() {
+        window.history.back();
+      }
+      
+  </script>
+</body>
+</html>

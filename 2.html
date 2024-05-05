@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 2</title>
+  <style>
+      .fullscreen-image {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        margin: 0;
+        padding:0;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        margin: auto;
+      }
+      body {
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(240, 242, 244);
+      }
+      .text-on-right {
+        position: absolute;
+        top: 50%;
+        left: 80%; /* Adjust the left percentage as needed */
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: #333;
+        font-size: 18px;
+      }
+      button {
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #35e13b;
+      }
+  </style>
+</head>
+<body>
+<img src="Simple Colorful Pie Chart Infographics.png" alt="Fullscreen Image">
+  <button onclick="goBack()">Go Back</button>
+  <script>
+    function goBack() {
+        window.history.back();
+      }
+  </script>
+</body>
+</html>

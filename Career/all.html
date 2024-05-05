@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Every Field</title>
+    <style>
+      .h1{
+        font-size: 80px;
+      }
+        body {
+            margin: 40px;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: rgb(239, 243, 245);
+            min-height: auto;
+        }
+        .block button{
+            background: rgb(169, 168, 162);
+            color: black;
+              width: 200px; 
+              padding: 5px; 
+              border-radius: 6px;
+            }
+        .join button{
+                background: rgb(51, 105, 51);
+                color: black;
+                  width: 200px; 
+                  margin: 3px;
+                  padding: 3px;
+                  border-radius:6px; 
+                }
+        .med button{
+              background: rgb(123, 81, 121);
+               color: black;
+              width: 200px; 
+             margin: 3px;
+             padding: 3px;
+           border-radius:6px; 
+            }
+            .Art button{
+                background: rgb(101, 99, 84);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .T button{
+                background: rgb(159, 110, 68);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .M button{
+                background: rgb(133, 105, 84);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .Chef button{
+                background: rgb(228, 105, 120);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .Arc button{
+                background: rgb(102, 101, 129);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .Ci button{
+                background: rgb(143, 143, 159);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .At button{
+                background: rgb(72, 77, 84);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .Tr button{
+                background: rgb(36, 79, 58);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .Bu button{
+                background: rgb(231, 231, 165);
+                 color: black;
+                width: 200px; 
+               margin: 3px;
+               padding: 3px;
+             border-radius:6px; 
+              }
+              .block {
+            width: 220px;
+            height: 200px;
+            margin: 30px;
+            padding: 20px;
+            background-color: #da79d5;
+            border: 5px solid rgb(58, 57, 57);
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .block:hover {
+            transform: scale(1.1);
+        }
+        .block button:hover{
+            transform: scale(0.9);
+        }
+        .block h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <div class="T">
+        <h2><center>Teacher</center></h2>
+        <button onclick="openWindow1()"><b>Teaching Careers</b></button>
+       <script>
+        function openWindow1(){
+            window.open("https://in.indeed.com/career-advice/finding-a-job/teacher-careers","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+        <p>A person who teaches or instructs, especially as a profession; instructor.</p>
+    </div>
+    </div>
+
+      <div class="block">
+        <div class="M">
+            <h2><center>Management</center></h2>
+            <button onclick="openWindow2()"><b>Management Careers</b></button>
+           <script>
+            function openWindow2(){
+                window.open("https://in.indeed.com/career-advice/finding-a-job/careers-in-management","","width=800px,height=600px,top=150px,left=500px")
+            }
+           </script>
+        <p> A broad field of study with a variety of employment opportunities for qualified candidates.</p>
+    </div>
+    </div>
+
+    <div class="block">
+      <div class="Chef">
+        <h2><center>Chef</center></h2>
+        <button onclick="openWindow3()"><b>Chef Field Career</b></button>
+       <script>
+        function openWindow3(){
+            window.open("https://www.naukri.com/chef-jobs","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+       <p> A professional cook and tradesman who is proficient in all aspects of food preparation.</p>
+    </div>
+    </div>
+
+    <div class="block">
+      <div class="Arc">
+        <h2><center>Architect</center></h2>
+        <button onclick="openWindow4()"><b>Architect Field Careers</b></button>
+       <script>
+        function openWindow4(){
+            window.open("https://www.archdaily.com/798632/21-careers-you-can-pursue-with-a-degree-in-architecture","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+       <p>A person whose job is to design new buildings and make certain that they are built correctly</p>
+    </div>
+    </div>
+
+    <div class="block">
+       <h2><center>Software Developer</center></h2>
+       <button onclick="openWindow5()"><b>Software Engineer Statistics</b></button>
+       <script>
+        function openWindow5(){
+            window.open("https://findly.in/software-engineer-statistics/","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+        <p>Use programming skills to create new software & applications.</p>
+    </div>
+
+    <div class="block">
+      <div class="join">
+        <h2><center>Armed Forces</center></h2>
+        <button onclick="openWindow6('https://indianarmy.nic.in')"><b>Join Indian Army</b></button>
+        <br>
+        <button onclick="openWindow7()"><b>Join Indian Air Force</b></button>
+        <br>
+        <button onclick="openWindow8()"><b>Join Indian Navy</b></button>
+        <script>
+         function openWindow6(){
+             window.open("https://indianarmy.nic.in","","width=800px,height=600px,top=150px,left=500px")
+             }
+         function openWindow7(){
+            window.open("https://indianairforce.nic.in/","","width=800px,height=600px,top=150px,left=500px")
+            }
+         function openWindow8(){
+              window.open("https://www.joinindiannavy.gov.in/","","width=800px,height=600px,top=150px,left=500px")
+            }
+        </script>
+        <p>Combined military, naval, and air forces of a nation.</p>
+    </div>
+</div>
+    <div class="block">
+        <div class="med">
+        <h2><center>Health Care</center></h2>
+        <button onclick="openWindow9()"><b>Medical Field Careers</b></button>
+       <script>
+        function openWindow9(){
+            window.open("https://college.mayo.edu/academics/explore-health-care-careers/careers-a-z/","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+        <p>Health care is delivered by health professionals and allied health fields.</p>
+    </div>
+    </div>
+    <div class="block">
+        <div class="Art">
+            <h2><center>Artist</center></h2>
+            <button onclick="openWindow10()"><b>Artist Careers</b></button>
+           <script>
+            function openWindow10(){
+                window.open("https://in.indeed.com/career-advice/finding-a-job/art-careers","","width=800px,height=600px,top=150px,left=500px")
+            }
+           </script>
+        <p>Somebody who produces art, especially paintings or drawings</p>
+    </div>
+    </div>
+    <div class="block">
+      <div class="Ci">
+        <h2><center>Civil Service</center></h2>
+        <button onclick="openWindow11()"><b>Apply here</b></button>
+       <script>
+        function openWindow11(){
+            window.open("https://upsc.gov.in/","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+      <p>Civil servants are employed to various agencies of India and can also be appointed as advisors, special duty officers, or private secretaries.</p>
+    </div>
+    </div>
+
+    <div class="block">
+      <div class="At">
+        <h2><center>Athlete</center></h2>
+        <button onclick="openWindow12()"><b>Athletic Career</b></button>
+       <script>
+        function openWindow12(){
+            window.open("https://www.learnhowtobecome.org/career-resource-center/careers-in-sports/","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+        <p>A person who can run, jump, etc. very well, especially one who takes part in sports competitions, etc..</p>
+    </div>
+    </div>
+
+    <div class="block">
+      <div class="Tr">
+        <h2><center>Traveller</center></h2>
+        <button onclick="openWindow13()"><b>Travelling Careers</b></button>
+       <script>
+        function openWindow13(){
+            window.open("https://www.businessnewsdaily.com/2389-jobs-travel-lovers.html","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+        <p>A traveller is a person who is making a journey or a person who travels a lot.</p>
+    </div>
+    </div>
+
+    <div class="block">
+      <div class="Bu">
+        <h2><center>Buisness</center></h2>
+        <button onclick="openWindow14()"><b>Buisness Careers</b></button>
+       <script>
+        function openWindow14(){
+            window.open("https://www.indeed.com/career-advice/finding-a-job/business-careers","","width=800px,height=600px,top=150px,left=500px")
+        }
+       </script>
+        <p>An economic activity that involves the exchange, purchase, sale or production of goods and services.</p>
+    </div>
+    </div>
+
+    <!-- Add more blocks as needed -->
+</body>
+</html>

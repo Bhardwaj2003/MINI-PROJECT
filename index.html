@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Planner</title>
+  <style>
+    body {
+        margin: 0;
+        overflow: hidden; /* Remove default margin and scrollbars */
+      }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color:rgb(127, 164, 206);
+    }
+      .fullscreen-image {
+        width: 100vw;
+        height: 100vh;
+        object-fit:cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Place the image behind the form */
+      }
+  
+      #budget-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1; /* Place the form above the image */
+      }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .expense-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .expense-input input {
+      flex: 1;
+      margin-right: 8px;
+    }
+
+    .remove-expense {
+      background-color: #ff6666;
+      color: #fff;
+      padding: 6px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    
+<div id="budget-form">
+  <h2><u>Student Budget Planner</u></h2>
+  
+  <label for="income">Cash-In-Hand:</label>
+  <input type="number" id="income" placeholder="Enter the Amount">
+
+  <div id="expenses-container">
+    <h3>Monthly Expenses:</h3>
+    <h4>(Food, Clothing, Trips, Beverages, Grocery, Stationary, etc.)</h4>
+    <div class="expense-input">
+      <input type="text" class="expense" placeholder="Expense Name">
+      <input type="number" class="expense-amount" placeholder="Expense Amount">
+      <button class="remove-expense" onclick="removeExpense(this)">Remove</button>
+    </div>
+  </div>
+  <button onclick="addExpense()">Add </button>&nbsp;
+  <button onclick="calculateBudget()">SUBMIT</button>
+
+  <h3>Result:</h3>
+  <p id="result">Your budget will be displayed here.</p>
+
+  <button type="button" onclick="redirectToAnotherPage()">Your Budget Plan</button>
+</div>
+
+
+<script>
+  function addExpense() {
+    var expensesContainer = document.getElementById('expenses-container');
+
+    var newExpenseInput = document.createElement('div');
+    newExpenseInput.classList.add('expense-input');
+    newExpenseInput.innerHTML = `
+      <input type="text" class="expense" placeholder="Expense name">
+      <input type="number" class="expense-amount" placeholder="Expense amount">
+      <button class="remove-expense" onclick="removeExpense(this)">Remove</button>
+    `;
+
+    expensesContainer.appendChild(newExpenseInput);
+  }
+
+  function removeExpense(button) {
+    var expenseInput = button.parentElement;
+    expenseInput.parentElement.removeChild(expenseInput);
+  }
+
+  function calculateBudget() {
+    var income = parseFloat(document.getElementById('income').value) || 0;
+    var expenseInputs = document.getElementsByClassName('expense-input');
+    var totalExpenses = 0;
+
+    for (var i = 0; i < expenseInputs.length; i++) {
+      var expenseAmount = parseFloat(expenseInputs[i].getElementsByClassName('expense-amount')[0].value) || 0;
+      totalExpenses += expenseAmount;
+    }
+
+    var budget = income - totalExpenses;
+
+    document.getElementById('result').innerText = 'Your budget is ' + budget.toFixed(2) + ' Rupees.';
+  if (totalExpenses > income) {
+    alert('Warning: Your expenses exceed your income! Consider adjusting your budget.');
+  } else if (totalExpenses === income) {
+    alert('Caution: Your budget is balanced, but there is no room for unexpected expenses.');
+  } else {
+    alert('Great job! You have a surplus in your budget. Consider saving more or treating yourself.');
+  }
+  }
+  function redirectToAnotherPage() {
+    window.location.href = 'index3.html';
+  }
+</script>
+<img src="back.jpg" alt="Fullscreen Image">
+</body>
+</html>
